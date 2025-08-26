@@ -18,6 +18,13 @@ int main() {
         {0,0,0,0,0,0,0,0,0,0},
         {0,0,0,0,0,0,0,0,0,0}
     };
+    tabuleiro[3][3] = 3; //declarando o valor para cada posição
+    tabuleiro[4][3] = 3; //mantendo o navio na coluna "D", indice "3"
+    tabuleiro[5][3] = 3;
+
+    tabuleiro[1][1] = 3; //declarando o valor para cada posição
+    tabuleiro[1][2] = 3; //manteidno da linha "2", indice "1"
+    tabuleiro[1][3] = 3;
 
     printf("TABULEIRO BATALHA NAVAL\n");
     printf("------------------------------------------\n");
@@ -30,17 +37,7 @@ int main() {
         {   printf("%2d ", linha[i]);
 
             for(int j = 0; j <= 9 ; j++){ //"i" são as linha e "j" são as colunas
-                if((j == 3) && ((i > 2) && (i<=5)))//a ideia, é instruir a casa onde começa o navio, [3][3] até [5][3]
-                {
-                printf(" 3 ");
-                }
-                else if((i == 1) && ((j>0) && (j <4)))//a ideia é igual, mas mantendo a linha fixa, e alternando a coluna, [1][1] até [1][3]
-                {
-                printf(" 3 ");    
-                }
-                else //optei pelo if else, pois pareceu mais intuitivo, "quando chegar na coluna x, e linha entre y e z, print 3, se não, prosseguir"
-                {
-                printf(" %d ", tabuleiro[i][j]);}
+                printf(" %d ", tabuleiro[i][j]); //aqui, imprime o valor de cada indice, linha a linha,
         }
         printf("\n");  
 
